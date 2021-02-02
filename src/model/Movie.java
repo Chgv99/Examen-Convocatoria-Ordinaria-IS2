@@ -7,14 +7,14 @@ public class Movie {
     private final String title;
     private final String genre;
     private final Date releaseDate;
-    private int views;
+    private Views views;
     private float rate;
 
     Movie(String title, String genre, Date releaseDate, int views, float rate) {
         this.title = title;
         this.genre = genre;
         this.releaseDate = releaseDate;
-        this.views = views;
+        this.views = new Views(views);
         this.rate = rate;
     }
 

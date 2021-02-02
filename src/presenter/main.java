@@ -12,7 +12,7 @@ public class main {
         Catalog catalogo = new Catalog();
         
         MovieManager manager = new MovieManager(catalogo);
-        manager.printCatalog();
+        manager.printCatalog("genre", "Terror");
     }
     
 }

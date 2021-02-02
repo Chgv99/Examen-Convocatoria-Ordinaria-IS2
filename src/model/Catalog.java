@@ -33,7 +33,7 @@ public class Catalog {
         return new GenreIterator(movies, genre);
     }
     
-    public Iterator createReleaseDateIterator() {
+    public Iterator createReleaseIterator() {
         return new ReleaseIterator(movies);
     }
     

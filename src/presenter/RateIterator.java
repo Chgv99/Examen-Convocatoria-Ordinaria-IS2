@@ -13,10 +13,15 @@ public class RateIterator implements Iterator {
     }
     
     public boolean hasNext(){
-        return false;
+        if (position >= movies.size()){
+            return false;
+        } else {
+            return true;
+        }
     }
     
     public Object next(){
+        //movie = movies[position]
         return null;
     }
 }

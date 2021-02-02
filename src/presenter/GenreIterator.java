@@ -3,7 +3,7 @@ package presenter;
 import java.util.ArrayList;
 import model.Movie;
 
-public class GenreIterator {
+public class GenreIterator implements Iterator {
     
     ArrayList<Movie> movies;
     int position = 0;
@@ -16,8 +16,10 @@ public class GenreIterator {
     
     public boolean hasNext(){
         if (position >= movies.size()){
+            System.out.println("has next");
             return false;
         } else {
+            System.out.println("has not next");
             return true;
         }
     }

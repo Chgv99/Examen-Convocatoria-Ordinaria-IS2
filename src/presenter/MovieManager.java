@@ -1,6 +1,7 @@
 package presenter;
 
 import model.Catalog;
+import model.Movie;
 
 class MovieManager {
     Catalog catalog;
@@ -9,15 +10,33 @@ class MovieManager {
         this.catalog = catalog;
     }
     
-    public void printCatalog(){
-        Iterator rateIterator = catalog.createIterator();
-    }
-    
     public void printCatalog(String criteria){
-        Iterator iterator;
-        if (criteria.equals("genre")){
-            iterator = catalog.createIterator();
-        }   
+        Iterator iterator = null;
+        if (criteria.equals("release")){
+            iterator = catalog.createReleaseIterator();
+        } else if (criteria.equals("view")){
+            iterator = catalog.createRateIterator();
+        } else if (criteria.equals("rate")){
+            iterator = catalog.createViewIterator();
+        }
+        print(iterator);
     }
     
+    public void printCatalog(String criteria, String genre){
+        System.out.println("genre");
+        Iterator iterator = null;
+        if (criteria.equals("genre")){
+            iterator = catalog.createGenreIterator(genre);
+            
+        }
+        print(iterator);
+    }
+    
+    private void print(Iterator it){
+        while(it.hasNext()) {
+            Movie movie = (Movie) it.next();
+            
+            System.out.println(movie.getTitle() +  ", " + movie.getGenre() + ", " + movie.getRate() +  ", " + movie.getViews() + ", ");
+        }
+    }
 }
