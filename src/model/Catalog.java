@@ -23,6 +23,7 @@ public class Catalog {
     
     public void addItem(String title, String genre, Date releaseDate, int views, float rate){
         Movie newMovie = new Movie(title, genre, releaseDate, views, rate);
+        movies.add(newMovie);
     }
 
     public ArrayList<Movie> getMovies() {

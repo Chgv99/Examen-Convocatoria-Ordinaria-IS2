@@ -16,16 +16,17 @@ public class GenreIterator implements Iterator {
     
     public boolean hasNext(){
         if (position >= movies.size()){
-            System.out.println("has next");
+            System.out.println("has not next");
             return false;
         } else {
-            System.out.println("has not next");
+            System.out.println("has next");
             return true;
         }
     }
     
     public Object next(){
         Movie nextMovieOfGenre;
+        System.out.println(movies.get(position).getGenre() + ", " + genre);
         if (movies.get(position).getGenre().equals(genre)){
             nextMovieOfGenre = movies.get(position);
         } else {

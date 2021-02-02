@@ -4,45 +4,45 @@ import java.util.Date;
 
 public class Movie {
     
-    private final String title;
-    private final String genre;
-    private final Date releaseDate;
+    private final Title title;
+    private final Genre genre;
+    private final ReleaseDate releaseDate;
     private Views views;
-    private float rate;
+    private Rate rate;
 
     Movie(String title, String genre, Date releaseDate, int views, float rate) {
-        this.title = title;
-        this.genre = genre;
-        this.releaseDate = releaseDate;
+        this.title = new Title(title);
+        this.genre = new Genre(genre);
+        this.releaseDate = new ReleaseDate(releaseDate);
         this.views = new Views(views);
-        this.rate = rate;
+        this.rate = new Rate(rate);
     }
 
     public String getTitle() {
-        return title;
+        return title.getTitle();
     }
     
     public String getGenre() {
-        return genre;
+        return genre.getGenre();
     }
 
     public Date getReleaseDate() {
-        return releaseDate;
+        return releaseDate.getDate();
     }
 
     public int getViews() {
-        return views;
+        return views.getViews();
     }
 
     public void setViews(int views) {
-        this.views = views;
+        this.views = new Views(views);
     }
     
     public float getRate() {
-        return rate;
+        return rate.getRate();
     }
 
     public void setRate(int rate) {
-        this.rate = rate;
+        this.rate = new Rate(rate);
     }    
 }

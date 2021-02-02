@@ -34,6 +34,7 @@ class MovieManager {
     
     private void print(Iterator it){
         while(it.hasNext()) {
+            System.out.println("dentro del while");
             Movie movie = (Movie) it.next();
             
             System.out.println(movie.getTitle() +  ", " + movie.getGenre() + ", " + movie.getRate() +  ", " + movie.getViews() + ", ");
