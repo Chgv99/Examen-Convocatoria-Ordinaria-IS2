@@ -6,14 +6,14 @@ public class Movie {
     
     private final Title title;
     private final Genre genre;
-    private final ReleaseDate releaseDate;
+    private final Date releaseDate;
     private Views views;
     private Rate rate;
 
     Movie(String title, String genre, Date releaseDate, int views, float rate) {
         this.title = new Title(title);
         this.genre = new Genre(genre);
-        this.releaseDate = new ReleaseDate(releaseDate);
+        this.releaseDate = releaseDate;
         this.views = new Views(views);
         this.rate = new Rate(rate);
     }
@@ -27,7 +27,7 @@ public class Movie {
     }
 
     public Date getReleaseDate() {
-        return releaseDate.getDate();
+        return releaseDate;
     }
 
     public int getViews() {

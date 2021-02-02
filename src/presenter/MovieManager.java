@@ -26,7 +26,6 @@ class MovieManager {
         Iterator iterator = null;
         if (criteria.equals("genre")){
             iterator = catalog.createGenreIterator(genre);
-            
         }
         print(iterator);
     }
@@ -34,8 +33,7 @@ class MovieManager {
     private void print(Iterator it){
         while(it.hasNext()) {
             Movie movie = (Movie) it.next();
-            
-            System.out.println(movie.getTitle() +  ", " + movie.getGenre() + ", " + movie.getRate() +  ", " + movie.getViews() + ", ");
+            if (movie != null) System.out.println(movie.getTitle() +  ", " + movie.getGenre() + ", " + movie.getRate() +  ", " + movie.getViews() + ", ");
         }
     }
 }

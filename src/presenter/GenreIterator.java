@@ -24,7 +24,6 @@ public class GenreIterator implements Iterator {
     
     public Object next(){
         Movie nextMovieOfGenre;
-        System.out.println(movies.get(position).getGenre() + ", " + genre);
         if (movies.get(position).getGenre().equals(genre)){
             nextMovieOfGenre = movies.get(position);
         } else {
