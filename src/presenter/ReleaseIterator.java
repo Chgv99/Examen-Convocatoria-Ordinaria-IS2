@@ -3,7 +3,7 @@ package presenter;
 import java.util.ArrayList;
 import model.Movie;
 
-public class ReleaseIterator {
+public class ReleaseIterator implements Iterator {
     
     ArrayList<Movie> movies;
     int position = 0;
