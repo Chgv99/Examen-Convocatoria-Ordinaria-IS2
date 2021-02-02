@@ -17,6 +17,7 @@ class MovieManager {
         } else if (criteria.equals("view")){
             iterator = catalog.createRateIterator();
         } else if (criteria.equals("rate")){
+            
             iterator = catalog.createViewIterator();
         }
         print(iterator);

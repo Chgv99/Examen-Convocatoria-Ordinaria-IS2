@@ -19,6 +19,7 @@ public class Catalog {
         addItem("Saw", "Terror", new Date(96, 12, 1), 45091, 4.9f);
         addItem("Saw 2", "Terror", new Date(100, 3, 3), 50431, 3.9f);
         addItem("Buscando a Nemo", "Infantil", new Date(101, 5, 13), 10100, 4.8f);
+        addItem("Eden Lake", "Terror", new Date(99, 2, 19), 9322, 4.2f);
     }
     
     public void addItem(String title, String genre, Date releaseDate, int views, float rate){
